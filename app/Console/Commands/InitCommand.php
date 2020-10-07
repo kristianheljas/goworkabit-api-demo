@@ -35,6 +35,8 @@ class InitCommand extends Command
 
         $this->call('key:generate');
 
+        $this->call('passport:keys', ['--force' => true]);
+
         if ($this->getDatabaseConfig('driver') === 'sqlite') {
             $databaseFile = $this->getDatabaseConfig('database');
 

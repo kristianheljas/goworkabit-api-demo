@@ -31,6 +31,13 @@ php artisan serve
 
 Voila, you can access the API at http://localhost:8000.
 
+## Generate tokens for demo
+I've created a command to easily generate tokens for seeded demo users.
+```
+php artisan demo:tokens
+```
+> This will generate file DEMO_TOKENS.md containing generated tokens
+
 ## Autocompletion support for Laravel Facades and Factories
 
 [barryvdh/laravel-ide-helper](https://packagist.org/packages/barryvdh/laravel-ide-helper) is used to generate helper files for IDEs to understand laravel facade and factory patterns.

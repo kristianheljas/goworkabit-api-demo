@@ -15,3 +15,5 @@ aliases
 Vagrantfile
 /.idea
 /.vagrant
+
+DEMO_TOKENS.md
