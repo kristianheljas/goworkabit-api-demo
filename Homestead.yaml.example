@@ -1,0 +1,30 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+  - ~/.ssh/id_rsa
+
+variables:
+  - key: DB_HOST
+    value: 127.0.0.1
+  - key: DB_PORT
+    value: 3306
+
+folders:
+  - map: /path/to/goworkabit-api-demo
+    to: /home/vagrant/code
+
+sites:
+  - map: goworkabit-api-demo.local
+    to: /home/vagrant/code/public
+
+databases:
+  - goworkabit-api-demo
+
+features:
+  - mariadb: false
+
+name: goworkabit-api-demo
+hostname: goworkabit-api-demo
