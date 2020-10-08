@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+use CloudCreativity\LaravelJsonApi\Facades\JsonApi;
+use CloudCreativity\LaravelJsonApi\Routing\RouteRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+JsonApi::register('v1')->authorizer('default')->routes(function (RouteRegistrar $api) {
+    $api->resource('users')->only('read');
 });

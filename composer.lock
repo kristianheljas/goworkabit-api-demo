@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3882ae9fafd16fc1dde57fbbf389fe87",
+    "content-hash": "4d2b5d387cf27c81eb91e2d05a63ca36",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,6 +109,93 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
+        },
+        {
+            "name": "cloudcreativity/laravel-json-api",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudcreativity/laravel-json-api.git",
+                "reference": "bf5801347fa2d53e220fd5192bdd43a2771b5244"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudcreativity/laravel-json-api/zipball/bf5801347fa2d53e220fd5192bdd43a2771b5244",
+                "reference": "bf5801347fa2d53e220fd5192bdd43a2771b5244",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/http": "^8.0",
+                "illuminate/pagination": "^8.0",
+                "illuminate/support": "^8.0",
+                "neomerx/json-api": "^1.0.3",
+                "nyholm/psr7": "^1.2",
+                "php": "^7.3",
+                "ramsey/uuid": "^3.0|^4.0",
+                "symfony/psr-http-message-bridge": "^2.0"
+            },
+            "require-dev": {
+                "cloudcreativity/json-api-testing": "^3.1",
+                "ext-sqlite3": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "laravel/legacy-factories": "^1.0.4",
+                "laravel/ui": "^2.0",
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "cloudcreativity/json-api-testing": "Required to use the test helpers."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "CloudCreativity\\LaravelJsonApi\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "JsonApi": "CloudCreativity\\LaravelJsonApi\\Facades\\JsonApi"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CloudCreativity\\LaravelJsonApi\\": "src/"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                }
+            ],
+            "description": "JSON API (jsonapi.org) support for Laravel applications.",
+            "homepage": "https://github.com/cloudcreativity/laravel-json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "cloudcreativity",
+                "json",
+                "jsonapi",
+                "jsonapi.org",
+                "laravel"
+            ],
+            "time": "2020-09-09T13:19:32+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -1768,6 +1855,61 @@
                 }
             ],
             "time": "2020-07-23T08:41:23+00:00"
+        },
+        {
+            "name": "neomerx/json-api",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neomerx/json-api.git",
+                "reference": "c911b7494496e79f9de72ee40d6a2b791caaf95b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neomerx/json-api/zipball/c911b7494496e79f9de72ee40d6a2b791caaf95b",
+                "reference": "c911b7494496e79f9de72ee40d6a2b791caaf95b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/http-message": "^1.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "monolog/monolog": "^1.18",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^4.6 || ^5.0 || ^6.0",
+                "scrutinizer/ocular": "^1.3",
+                "squizlabs/php_codesniffer": "^2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Neomerx\\JsonApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "neomerx",
+                    "email": "info@neomerx.com"
+                }
+            ],
+            "description": "Framework agnostic JSON API (jsonapi.org) implementation",
+            "homepage": "https://github.com/neomerx/json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "json",
+                "jsonapi",
+                "jsonapi.org",
+                "neomerx"
+            ],
+            "time": "2018-02-21T13:45:30+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5600,6 +5742,59 @@
                 }
             ],
             "time": "2018-12-13T10:34:14+00:00"
+        },
+        {
+            "name": "cloudcreativity/json-api-testing",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudcreativity/json-api-testing.git",
+                "reference": "9905bde76293059ea5d0a750f494565c9d0d87de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudcreativity/json-api-testing/zipball/9905bde76293059ea5d0a750f494565c9d0d87de",
+                "reference": "9905bde76293059ea5d0a750f494565c9d0d87de",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.2",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CloudCreativity\\JsonApi\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Cloud Creativity Ltd",
+                    "email": "info@cloudcreativity.co.uk"
+                }
+            ],
+            "description": "PHPUnit test helpers to check JSON API documents.",
+            "homepage": "https://github.com/cloudcreativity/json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "cloudcreativity",
+                "json",
+                "jsonapi",
+                "jsonapi.org"
+            ],
+            "time": "2020-09-09T11:40:23+00:00"
         },
         {
             "name": "composer/ca-bundle",

@@ -31,9 +31,16 @@ php artisan serve
 
 Voila, you can access the API at http://localhost:8000.
 
+## Run automated tests
+You can run automated [PHPUnit tests](https://phpunit.de/) with following command
+``` shell script
+php artisan test
+```
+> You can also call PHPUnit directly via `php vendor/bin/phpunit`
+
 ## Generate tokens for demo
 I've created a command to easily generate tokens for seeded demo users.
-```
+``` shell script
 php artisan demo:tokens
 ```
 > This will generate file DEMO_TOKENS.md containing generated tokens
