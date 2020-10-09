@@ -1,6 +1,7 @@
 <?php
 
 use CloudCreativity\LaravelJsonApi\Facades\JsonApi;
+use CloudCreativity\LaravelJsonApi\Routing\RelationshipsRegistration;
 use CloudCreativity\LaravelJsonApi\Routing\RouteRegistrar;
 
 /*
@@ -15,5 +16,16 @@ use CloudCreativity\LaravelJsonApi\Routing\RouteRegistrar;
 */
 
 JsonApi::register('v1')->authorizer('default')->routes(function (RouteRegistrar $api) {
-    $api->resource('users')->only('read');
+
+    $api->resource('users')
+        ->only('read')
+        ->relationships(function (RelationshipsRegistration $relations) {
+            $relations->hasMany('work-bits')->readOnly();
+        });;
+
+    $api->resource('work-bits')
+        ->relationships(function (RelationshipsRegistration $relations) {
+            $relations->hasOne('author')->readOnly();
+        });;;
+
 });

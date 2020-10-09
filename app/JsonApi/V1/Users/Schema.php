@@ -32,6 +32,7 @@ class Schema extends SchemaProvider
         return [
             'name' => $resource->name,
             'email' => $resource->email,
+            'is_company' => $resource->is_company,
             'createdAt' => $resource->created_at,
             'updatedAt' => $resource->updated_at,
         ];

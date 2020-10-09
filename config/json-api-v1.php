@@ -67,6 +67,7 @@ return [
     */
     'resources' => [
         'users' => \App\Models\User::class,
+        'work-bits' => \App\Models\WorkBit::class,
     ],
 
     /*

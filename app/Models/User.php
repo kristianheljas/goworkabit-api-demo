@@ -40,12 +40,20 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_company' => 'boolean'
     ];
+
+    public function workBits() {
+        return $this->hasMany(WorkBit::class);
+    }
+
+    public function isCompany()
+    {
+        return $this->is_company;
+    }
 
     public function resolveRouteBinding($value, $field = null)
     {
         return parent::resolveRouteBinding($value === 'me' ? Auth::id() : $value, $field);
     }
-
-
 }

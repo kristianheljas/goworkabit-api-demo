@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\JsonApiServiceProvider::class,
+        App\Providers\ValidationServiceProvider::class,
     ],
 
     /*

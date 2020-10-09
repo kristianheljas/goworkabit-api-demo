@@ -45,6 +45,35 @@ php artisan demo:tokens
 ```
 > This will generate file DEMO_TOKENS.md containing generated tokens
 
+## API Documentation
+
+The API is not documented yet, but I would look into automating OpenAPI specification generation from the source code.
+There are many ready-made OpenAPI fontends, most notably [Swagger UI](https://swagger.io/tools/swagger-ui/)
+
+You can however list all configured API route via `php artisan api:route:list`, which would produce something like this:
+```
++----------+--------------------------------- API Routes +--------------------------------------------+
+| Method   | Uri                                         | Name                                       |
++----------+---------------------------------------------+--------------------------------------------+
+| GET|HEAD | /v1/users/{record}                          | api:v1:users.read                          |
+| GET|HEAD | /v1/users/{record}/work-bits                | api:v1:users.relationships.work-bits       |
+| GET|HEAD | /v1/users/{record}/relationships/work-bits  | api:v1:users.relationships.work-bits.read  |
+| GET|HEAD | /v1/work-bits                               | api:v1:work-bits.index                     |
+| POST     | /v1/work-bits                               | api:v1:work-bits.create                    |
+| GET|HEAD | /v1/work-bits/{record}                      | api:v1:work-bits.read                      |
+| PATCH    | /v1/work-bits/{record}                      | api:v1:work-bits.update                    |
+| DELETE   | /v1/work-bits/{record}                      | api:v1:work-bits.delete                    |
+| GET|HEAD | /v1/work-bits/{record}/author               | api:v1:work-bits.relationships.author      |
+| GET|HEAD | /v1/work-bits/{record}/relationships/author | api:v1:work-bits.relationships.author.read |
++----------+---------------------------------------------+--------------------------------------------+
+
++--------+--------------+------------- Special Routes --------------------------------------+
+| Method | Uri          | Description                                                       |
++--------+--------------+-------------------------------------------------------------------+
+| *      | /v1/users/me | You can replace ID with 'me' for the currently authenticated user |
++--------+--------------+-------------------------------------------------------------------+
+```
+
 ## Autocompletion support for Laravel Facades and Factories
 
 [barryvdh/laravel-ide-helper](https://packagist.org/packages/barryvdh/laravel-ide-helper) is used to generate helper files for IDEs to understand laravel facade and factory patterns.

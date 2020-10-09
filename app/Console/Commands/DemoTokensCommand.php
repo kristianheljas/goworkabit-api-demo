@@ -47,7 +47,7 @@ class DemoTokensCommand extends Command
 
         $tokensMarkdown = '';
 
-        foreach (['user@example.com'] as $email) {
+        foreach (['user@example.com', 'company@example.com'] as $email) {
             /* @var $user User */
             $user = User::where('email', $email)->first();
 
